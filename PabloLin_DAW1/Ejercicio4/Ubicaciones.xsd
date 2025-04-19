@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!-- 
+Nombre: Pablo Lin 
+Curso: 1DAW
+Fecha: 19/04/25
+Ejercicio: Ejercicio4
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"> 
+    <xs:element name="ubicaciones"> 
+        <xs:complexType> 
+            <xs:sequence> 
+                <xs:element name="ubicacion" type="InfoUbicacion" 
+                maxOccurs="unbounded"/> 
+            </xs:sequence> 
+        </xs:complexType> 
+    </xs:element> 
+
+    <xs:simpleType name="direccion"> 
+        <xs:restriction base="xs:string"> 
+            <xs:enumeration value="norte"/> 
+            <xs:enumeration value="sur"/> 
+            <xs:enumeration value="este"/> 
+            <xs:enumeration value="oeste"/> 
+        </xs:restriction> 
+    </xs:simpleType> 
+
+    <xs:complexType name="InfoUbicacion">
+        <xs:sequence>
+            <xs:element name="direccion" type="direccion"/>
+        </xs:sequence>
+        <xs:attribute name="metros" type="xs:integer"/>
+    </xs:complexType>
+</xs:schema>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+Nombre: Pablo Lin 
+Curso: 1DAW
+Fecha: 19/04/25
+Ejercicio: Ejercicio1
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:simpleType name="clave1">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z0-9]*"/>
+            <xs:length value="10"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="clave2">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z0-9]{10}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>
